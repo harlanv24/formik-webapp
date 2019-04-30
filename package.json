@@ -6,12 +6,12 @@
   "homepage": "https://codesandbox.io/s/q4qx876j",
   "main": "index.js",
   "dependencies": {
-    "yup": "0.21.3",
-    "react-select": "1.0.0-rc.5",
-    "react-dom": "15.5.3",
+    "classnames": "^2.2.5",
+    "formik": "^1.5.4",
     "react": "15.5.3",
-    "formik": "latest",
-    "classnames": "2.2.5"
+    "react-dom": "^15.5.3",
+    "react-select": "^1.0.0-rc.5",
+    "yup": "^0.21.3"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"

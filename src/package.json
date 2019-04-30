@@ -1,5 +1,5 @@
 {
-  "name": "formik-radio-and-checkbox-inputs",
+  "name": "formik-webapp",
   "version": "1.0.0",
   "description": "This is an example how to build custom primitives to handle radio and checkbox groups, and single checkboxes for Formik.",
   "keywords": [],
