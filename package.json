@@ -1,16 +1,19 @@
 {
+  "repository": "https://github.com/harlanv24/formik-webapp",
   "name": "formik-webapp",
   "version": "0.0.1",
   "description": "GWA Test Page",
   "keywords": [],
   "homepage": "https://sad-bhabha-a326c5.netlify.com/",
   "main": "index.js",
+  
   "dependencies": {
     "classnames": "^2.2.6",
     "formik": "^1.5.4",
-    "react": "15.5.3",
+    "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-select": "^1.3.0",
+    "typescript": "^3.4.5",
     "yup": "^0.21.3"
   },
   "devDependencies": {

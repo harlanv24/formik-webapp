@@ -182,7 +182,7 @@ const App = () => (
         touched,
         isSubmitting
       }) => (
-        <form name="GWA DATA" method="POST" data-netlify="true"nameonSubmit={handleSubmit}>
+        <form nameonSubmit={handleSubmit}>
           <h2>Job List</h2>
           <p>Which gig jobs are you currently employed at?</p>
           <CheckboxGroup
