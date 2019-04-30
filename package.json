@@ -1,0 +1,25 @@
+{
+  "name": "formik-radio-and-checkbox-inputs",
+  "version": "0.0.1",
+  "description": "This is an example how to build custom primitives to handle radio and checkbox groups, and single checkboxes for Formik.",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/q4qx876j",
+  "main": "index.js",
+  "dependencies": {
+    "yup": "0.21.3",
+    "react-select": "1.0.0-rc.5",
+    "react-dom": "15.5.3",
+    "react": "15.5.3",
+    "formik": "latest",
+    "classnames": "2.2.5"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
