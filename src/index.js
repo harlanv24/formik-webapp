@@ -36,52 +36,6 @@ const Checkbox = ({
   );
 };
 
-//TextFieldOther
-
-class TextFieldOther extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          search: 'Other- Please Specify'
-      };
-  }
-
-  updateSearch(event) {
-      this.setState({search: event.target.value.substr(0,25)})
-  }
-
-  render() {
-      return (
-          <input type="text"
-          value={this.state.search}
-          onChange={this.updateSearch.bind(this)}/>
-      )
-  }
-}
-
-//TextField
-
-class TextField extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          search: ''
-      };
-  }
-
-  updateSearch(event) {
-      this.setState({search: event.target.value.substr(0,25)})
-  }
-
-  render() {
-      return (
-          <input type="text"
-          value={this.state.search}
-          onChange={this.updateSearch.bind(this)}/>
-      )
-  }
-}
-
 // Checkbox group
 class CheckboxGroup extends React.Component {
   constructor(props) {
@@ -202,14 +156,16 @@ const App = () => (
       initialValues={{
         radioGroup: "",
         checkboxGroup: [],
-        singleCheckbox: false
+        singleCheckbox: false,
+
       }}
       validationSchema={Yup.object().shape({
-        radioGroup: Yup.string().required("A radio option is required"),
+        radioGroup: Yup.string().required("An option is required"),
         checkboxGroup: Yup.array().required(
           "At least one checkbox is required"
         ),
-        singleCheckbox: Yup.bool().oneOf([true], "Must agree to something")
+        singleCheckbox: Yup.bool().oneOf([true], "Must agree to something"),
+
       })}
       onSubmit={(values, actions) => {
         setTimeout(() => {
@@ -286,12 +242,6 @@ const App = () => (
               id="other"
               label="Other"
             />
-            <Field
-              component={TextFieldOther}
-              name="checkboxGroup"
-              id="other"
-              label="Other"
-            />
           </CheckboxGroup>
           <h2>Employment Status</h2>
           <p>Which option best describes you?</p>
@@ -318,13 +268,6 @@ const App = () => (
 
         <h2>Weekly Hours</h2>
         <p>How many hours per week do you work at gig jobs?</p>
-        <Field
-              component={TextField}
-              name="checkboxGroup"
-              id="other"
-              label="Other"
-            />
-
           <h2>Vehicles</h2>
           <p></p>
           <CheckboxGroup
@@ -362,12 +305,6 @@ const App = () => (
             />
             <Field
               component={Checkbox}
-              name="checkboxGroup"
-              id="other"
-              label="Other"
-            />
-            <Field
-              component={TextFieldOther}
               name="checkboxGroup"
               id="other"
               label="Other"
