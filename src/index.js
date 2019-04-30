@@ -36,6 +36,52 @@ const Checkbox = ({
   );
 };
 
+//TextFieldOther
+
+class TextFieldOther extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          search: 'Other- Please Specify'
+      };
+  }
+
+  updateSearch(event) {
+      this.setState({search: event.target.value.substr(0,25)})
+  }
+
+  render() {
+      return (
+          <input type="text"
+          value={this.state.search}
+          onChange={this.updateSearch.bind(this)}/>
+      )
+  }
+}
+
+//TextField
+
+class TextField extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          search: ''
+      };
+  }
+
+  updateSearch(event) {
+      this.setState({search: event.target.value.substr(0,25)})
+  }
+
+  render() {
+      return (
+          <input type="text"
+          value={this.state.search}
+          onChange={this.updateSearch.bind(this)}/>
+      )
+  }
+}
+
 // Checkbox group
 class CheckboxGroup extends React.Component {
   constructor(props) {
@@ -150,7 +196,8 @@ const RadioButtonGroup = ({
 
 const App = () => (
   <div className="app">
-    <h1>Radio & checkbox inputs with Formik</h1>
+    <h1>Welcome to the Gig Worker Aggregator Experience!</h1>
+    <p>Please enter some information below to see how the app works and begin building your profile.</p>
     <Formik
       initialValues={{
         radioGroup: "",
@@ -180,18 +227,11 @@ const App = () => (
         isSubmitting
       }) => (
         <form onSubmit={handleSubmit}>
-          <h2>Single checkbox</h2>
-          <Field
-            component={Checkbox}
-            name="singleCheckbox"
-            id="singleCheckbox"
-            label="Agree to something"
-          />
-
-          <h2>Checkbox group</h2>
+          <h2>Job List</h2>
+          <p>Which gig jobs are you currently employed at?</p>
           <CheckboxGroup
             id="checkboxGroup"
-            label="Which of these?"
+            label='Select as many as needed. If none of your vehicles are listed, please select "Other"'
             value={values.checkboxGroup}
             error={errors.checkboxGroup}
             touched={touched.checkboxGroup}
@@ -201,27 +241,63 @@ const App = () => (
             <Field
               component={Checkbox}
               name="checkboxGroup"
-              id="checkbox1"
-              label="Option 1"
+              id="uber"
+              label="Uber"
             />
             <Field
               component={Checkbox}
               name="checkboxGroup"
-              id="checkbox2"
-              label="Option 2"
+              id="lyft"
+              label="Lyft"
             />
             <Field
               component={Checkbox}
               name="checkboxGroup"
-              id="checkbox3"
-              label="Option 3"
+              id="flex"
+              label="Amazon Flex"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="ddash"
+              label="DoorDash"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="ghub"
+              label="GrubHub"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="ueats"
+              label="UberEats"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="pmates"
+              label="Postmates"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="other"
+              label="Other"
+            />
+            <Field
+              component={TextFieldOther}
+              name="checkboxGroup"
+              id="other"
+              label="Other"
             />
           </CheckboxGroup>
-
-          <h2>Radio group</h2>
+          <h2>Employment Status</h2>
+          <p>Which option best describes you?</p>
           <RadioButtonGroup
             id="radioGroup"
-            label="One of these please"
+            label="Describe what purpose gig jobs serve for you. Please select one option"
             value={values.radioGroup}
             error={errors.radioGroup}
             touched={touched.radioGroup}
@@ -229,20 +305,74 @@ const App = () => (
             <Field
               component={RadioButton}
               name="radioGroup"
-              id="radioOption1"
-              label="Choose this option"
+              id="full"
+              label="They are my main source of income"
             />
             <Field
               component={RadioButton}
               name="radioGroup"
-              id="radioOption2"
-              label="Or choose this one"
+              id="part"
+              label="They make me extra money on the side"
             />
           </RadioButtonGroup>
 
-          <h2>Single radio</h2>
-          <p>Is that a valid use case?</p>
+        <h2>Weekly Hours</h2>
+        <p>How many hours per week do you work at gig jobs?</p>
+        <Field
+              component={TextField}
+              name="checkboxGroup"
+              id="other"
+              label="Other"
+            />
 
+          <h2>Vehicles</h2>
+          <p></p>
+          <CheckboxGroup
+            id="checkboxGroup"
+            label='Select as many as needed. If none of your vehicles are listed, please select "Other"'
+            value={values.checkboxGroup}
+            error={errors.checkboxGroup}
+            touched={touched.checkboxGroup}
+            onChange={setFieldValue}
+            onBlur={setFieldTouched}
+          >
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="car"
+              label="Car"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="bike"
+              label="Bike"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="scoot"
+              label="Scooter"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="moto"
+              label="Motorcycle"
+            />
+            <Field
+              component={Checkbox}
+              name="checkboxGroup"
+              id="other"
+              label="Other"
+            />
+            <Field
+              component={TextFieldOther}
+              name="checkboxGroup"
+              id="other"
+              label="Other"
+            />
+          </CheckboxGroup>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
