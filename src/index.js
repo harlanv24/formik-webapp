@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import ReactDOM from 'react-dom'
 const styled = styled.default;
 
 const BasicNotification = styled.p`
