@@ -150,7 +150,6 @@ const RadioButtonGroup = ({
 
 const App = () => (
   <div className="app">
-    <h1>Welcome to the Gig Worker Aggregator Experience!</h1>
     <p>Please enter some information below to see how the app works and begin building your profile.</p>
     <Formik
       initialValues={{

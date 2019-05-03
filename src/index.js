@@ -1,33 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
-const styled = styled.default;
+<html>
+    <h1>
+        <center>We know your schedule is busy. We'll make it so it doesn't have to be.</center>
+    </h1>
 
-const BasicNotification = styled.p`
-    background: lightblue;
-    padding: 5px;
-    margin: 5px;
-    color: black;
-`;
+    <body>
+        <center>
+            <p>Do your part time jobs make your day harder to manage?<br />
+            Click below to learn how we can simplify your day and help<br />
+            you build a schedule that fits your personal needs and preferences.
+            </p>
+        </center>
 
-const SuccessNotification = styled(BasicNotification)`
-    background: lightgreen;
-`;
-
-const ErrorNotification = styled(BasicNotification)`
-    background: lightcoral;
-    font-weight: bold;  
-`;
-
-class Application extends React.Component {
-  render() {
-    return (
-      <div>
-        <BasicNotification>Basic Message</BasicNotification>
-        <SuccessNotification>Success Message</SuccessNotification>
-        <ErrorNotification>Error Message</ErrorNotification>
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(<Application />, document.getElementById('content'));
+    </body>
+</html>
