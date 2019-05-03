@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import ReactDOM from 'react-dom'
 const styled = styled.default;
 
@@ -26,7 +25,6 @@ class Application extends React.Component {
         <BasicNotification>Basic Message</BasicNotification>
         <SuccessNotification>Success Message</SuccessNotification>
         <ErrorNotification>Error Message</ErrorNotification>
-        <Link to="/profile-setup/">Click here to learn more and begin setting up your GWA profile</Link>
       </div>
     )
   }
