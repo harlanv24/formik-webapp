@@ -1,10 +1,32 @@
-<html>
-<body style="background-color:powderblue;">
+const styled = styled.default;
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+const BasicNotification = styled.p`
+    background: lightblue;
+    padding: 5px;
+    margin: 5px;
+    color: black;
+`;
 
-<Link to="/profile-setup/">Click here to learn more and begin setting up your GWA profile</Link>
+const SuccessNotification = styled(BasicNotification)`
+    background: lightgreen;
+`;
 
-</body>
-</html>
+const ErrorNotification = styled(BasicNotification)`
+    background: lightcoral;
+    font-weight: bold;  
+`;
+
+class Application extends React.Component {
+  render() {
+    return (
+      <div>
+        <BasicNotification>Basic Message</BasicNotification>
+        <SuccessNotification>Success Message</SuccessNotification>
+        <ErrorNotification>Error Message</ErrorNotification>
+        <Link to="/profile-setup/">Click here to learn more and begin setting up your GWA profile</Link>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Application />, document.getElementById('content'));
