@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'gatsby';
 const styled = styled.default;
 
 const BasicNotification = styled.p`
