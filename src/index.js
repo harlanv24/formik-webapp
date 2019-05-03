@@ -1,7 +1,6 @@
 import "./style.css";
 import React from "react";
 
-const IndexPage = () => (
     <body>
     <div>
     <h1>
@@ -13,9 +12,5 @@ const IndexPage = () => (
             schedule that fits your personal needs and preferences, saving you time.
             </p>
         </center>
-
     </div>
     </body>
-)
-
-export default IndexPage
