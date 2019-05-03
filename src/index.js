@@ -1,8 +1,8 @@
 import "./style.css";
 import React from "react";
 
-
-<html>
+const IndexPage = () => (
+    <div>
     <h1>
         <center>We know your schedule is busy. We'll make it so it doesn't have to be.</center>
     </h1>
@@ -14,6 +14,8 @@ import React from "react";
             schedule that fits your personal needs and preferences, saving you time.
             </p>
         </center>
-
     </body>
-</html>
+    </div>
+)
+
+export default IndexPage
