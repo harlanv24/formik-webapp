@@ -1,6 +1,7 @@
 import "./style.css";
 import React from "react";
 
+const IndexPage = (
     <body>
     <div>
     <h1>
@@ -14,3 +15,6 @@ import React from "react";
         </center>
     </div>
     </body>
+);
+
+ReactDOM.render(IndexPage, document.getElementById('root'));
