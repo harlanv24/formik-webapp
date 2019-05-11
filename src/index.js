@@ -186,7 +186,7 @@ const App = () => (
           <p>Which gig jobs are you currently employed at?</p>
           <CheckboxGroup
             id="checkboxGroup"
-            label='Select as many as needed. If none of your vehicles are listed, please select "Other"'
+            label='Select as many as needed. If none of your jobs are listed, please select "Other"'
             value={values.checkboxGroup}
             error={errors.checkboxGroup}
             touched={touched.checkboxGroup}
